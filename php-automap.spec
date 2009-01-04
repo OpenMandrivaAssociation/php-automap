@@ -5,11 +5,12 @@
 Summary:	A fast map-based autoloader for PHP
 Name:		php-%{modname}
 Version:	1.1.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/automap/
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
+Patch0:		automap-1.1.0-format_not_a_string_literal_and_no_format_arguments.diff
 BuildRequires:	php-devel >= 3:5.2.0
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -20,6 +21,8 @@ Automap is a map-based autoloader for PHP.
 
 %setup -q -n %{modname}-%{version}
 [ "../package*.xml" != "/" ] && mv -f ../package*.xml .
+
+%patch0 -p0
 
 # lib64 fixes
 perl -pi -e "s|/lib\b|/%{_lib}|g" config.m4
