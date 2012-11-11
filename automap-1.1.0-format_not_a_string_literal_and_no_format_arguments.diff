@@ -1,0 +1,14 @@
+--- Automap.c	2008-01-19 04:07:09.000000000 +0100
++++ Automap.c.oden	2009-01-04 12:24:31.000000000 +0100
+@@ -1408,9 +1408,9 @@ cellpadding=3 cellspacing=0 style=\"bord
+ 					,1,&zp TSRMLS_CC);
+ 				if (ZVAL_IS_STRING(&zret)) {
+ 					php_printf("<a href=\"%s\">%s</a>",Z_STRVAL(zret),fname);
+-				} else php_printf(fname);
++				} else php_printf("%s", fname);
+ 				zval_dtor(&zret);
+-			} else php_printf(fname);
++			} else php_printf("%s", fname);
+ 
+ 			php_printf("</td></tr>\n");
+ 
