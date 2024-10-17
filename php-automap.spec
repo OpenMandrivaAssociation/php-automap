@@ -8,7 +8,7 @@ Version:	1.1.0
 Release:	%mkrel 12
 Group:		Development/PHP
 License:	PHP License
-URL:		http://pecl.php.net/package/automap/
+URL:		https://pecl.php.net/package/automap/
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Patch0:		automap-1.1.0-format_not_a_string_literal_and_no_format_arguments.diff
 BuildRequires:	php-devel >= 3:5.2.0
