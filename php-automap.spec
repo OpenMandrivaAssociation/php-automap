@@ -11,6 +11,11 @@ License:	PHP License
 URL:		https://pecl.php.net/package/automap/
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Patch0:		automap-1.1.0-format_not_a_string_literal_and_no_format_arguments.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	php-devel >= 3:5.2.0
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
