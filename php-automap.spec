@@ -5,7 +5,7 @@
 Summary:	A fast map-based autoloader for PHP
 Name:		php-%{modname}
 Version:	1.1.0
-Release:	%mkrel 12
+Release:	13
 Group:		Development/PHP
 License:	PHP License
 URL:		https://pecl.php.net/package/automap/
